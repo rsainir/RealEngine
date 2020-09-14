@@ -10,7 +10,7 @@ namespace RealEngine {
 		virtual void Update(float dt) = 0;
 		virtual void Draw(float dt) = 0;
 
-		virtual void Pause() {} //{} or no?????
+		virtual void Pause() {} //dont have to define necesarliy
 		virtual void Resume() {}
 	};
 }

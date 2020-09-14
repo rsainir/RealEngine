@@ -4,6 +4,7 @@
 namespace RealEngine {
 	Game::Game(int width, int height, string name) {
 		data->window.create(sf::VideoMode(width, height), name, sf::Style::Close | sf::Style::Titlebar); //context settings, creating window with specified size
+		data->machine.PushState(StateRef(new SplashState(this->data))); //create new splash state, pass in data pointer 
 		this->Start();
 	}
 

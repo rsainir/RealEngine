@@ -19,6 +19,15 @@
     <Filter Include="Engine Source">
       <UniqueIdentifier>{5928661a-ffdd-449f-ac21-6c10d0d60558}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{d89495f7-f247-4260-a912-89576686bc90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\Headers">
+      <UniqueIdentifier>{68506d7c-dfe1-415e-a916-480be59e0b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\Source">
+      <UniqueIdentifier>{3e43817d-fac8-4d0a-8cf4-94c2c2f8479a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -30,9 +39,6 @@
     <ClCompile Include="StateMachine.cpp">
       <Filter>Engine Source</Filter>
     </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Engine Source</Filter>
-    </ClCompile>
     <ClCompile Include="AssetManager.cpp">
       <Filter>Engine Source</Filter>
     </ClCompile>
@@ -41,6 +47,15 @@
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Engine Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashState.cpp">
+      <Filter>States\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MMState.cpp">
+      <Filter>States\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsState.cpp">
+      <Filter>States\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -53,14 +68,29 @@
     <ClInclude Include="StateMachine.h">
       <Filter>Engine Headers</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Engine Headers</Filter>
-    </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Engine Headers</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DEFINITIONS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>States\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashState.h">
+      <Filter>States\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDataPtr.h">
+      <Filter>Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MMState.h">
+      <Filter>States\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsState.h">
+      <Filter>States\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

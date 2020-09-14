@@ -1,10 +1,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <game.h>
+#include "Game.h"
 #include "Menu.h"
+#include "DEFINITIONS.h"
+
 
 int main() {
-	RealEngine::Game(800, 600, "Test SFML");
+	RealEngine::Game(SCREEN_WIDTH, SCREEN_HEIGHT, "State of Unrest");
 	return EXIT_SUCCESS;
 }
 

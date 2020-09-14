@@ -21,7 +21,7 @@ Menu::Menu(float width, float height) {
 
 	menu[2].setFont(font);
 	menu[2].setFillColor(sf::Color::White);
-	menu[2].setString("Quit");
+	menu[2].setString("Quit"); 
 	menu[2].setPosition(sf::Vector2f(width / 2, height / (MAX_ITEMS + 1) * 3)); //dynamic sizing
 
 	selectedItemIndex = 0;
