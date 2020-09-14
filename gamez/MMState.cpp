@@ -2,6 +2,7 @@
 #include <sstream>
 #include "DEFINITIONS.h"
 #include "MMState.h"
+#include "SettingsState.h"
 
 //todo: clean up pointers, delete allocated memory!! we dont want memory leaks
 namespace RealEngine {
@@ -61,7 +62,6 @@ namespace RealEngine {
 	void MMState::InputHandle() {
 		sf::Event event;
 
-
 		while (this->data->window.pollEvent(event)) {
 
 			switch (event.type) { //switch for all diff event types
@@ -84,10 +84,11 @@ namespace RealEngine {
 						cout << "switch to game state here!" << endl;
 						break;
 					case 1:
-						cout << "switch to settings state here!" << endl;
+						//replace state in state machine w/ settings state
+						this->data->machine.PushState(StateRef(new SettingsState(this->data)), true);
+						//can possibly manually call destructor? find out where we want to deallocate data
 						break;
 					case 2:
-						cout << "cya" << endl;
 						this->data->window.close();
 						break; //wont reach this break but whatever lol
 					}

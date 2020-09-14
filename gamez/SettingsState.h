@@ -2,6 +2,8 @@
 #include "State.h"
 #include "DEFINITIONS.h"
 #include "Game.h"
+#include "MMState.h"
+
 
 namespace RealEngine {
 
@@ -27,7 +29,7 @@ namespace RealEngine {
 
 		int selectedItemIndex;
 
-		sf::Text menu[OPTIONS_ROWS][OPTIONS_COLS]; //6 options in menu, want in 2d array
+		sf::Text menu[OPTIONS_ROWS]; //if we want to expand to 6 options in menu, want in 2d array
 
 
 	};

@@ -20,6 +20,8 @@ namespace RealEngine {
 		sf::RenderWindow window;
 		AssetManager assets;
 		InputManager input;
+
+		bool fullScreen = false;
 	};
 
 	
@@ -33,6 +35,7 @@ namespace RealEngine {
 	private:
 		const float dt = 1.0f / 60.0f; //framreate is set to 60fps
 		sf::Clock clock;
+		
 
 		//allocate memory for the data, we want it to be smart
 		GameDataPtr data = make_shared<GameData>(); //allocate memory for control block and resource, avoid using "new" before passing to shared_ptr constructor
