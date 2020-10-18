@@ -24,7 +24,6 @@ namespace RealEngine {
 			if (sf::Event::Closed == event.type) {
 				this->data->window.close();
 			}
-
 		}
 	}
 
@@ -34,6 +33,7 @@ namespace RealEngine {
 			this->data->machine.PushState(StateRef(new MMState(this->data)), true); //pass data to a new state, replace old state 
 		}
 	}
+
 	void SplashState::Draw(float dt) { //actually displaying stuff
 		this->data->window.clear(sf::Color::Green);
 		this->data->window.draw(this->background);

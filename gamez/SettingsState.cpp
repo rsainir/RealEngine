@@ -12,8 +12,8 @@ namespace RealEngine{
 
 		menu[0].setFont(this->data->assets.GetFont("MotherFont"));
 		menu[0].setFillColor(sf::Color::Red);
-		menu[0].setString("Toggle Full Screen"); //add checkbox for if its full scxreen or not, check how to make full screen
-		menu[0].setPosition(sf::Vector2f(SCREEN_WIDTH * 0.4, SCREEN_HEIGHT / (MAX_ITEMS + 1) * 1));
+		menu[0].setString("Toggle Fullscreen"); //add checkbox for if its full scxreen or not, check how to make full screen
+		menu[0].setPosition(sf::Vector2f(SCREEN_WIDTH * 0.395, SCREEN_HEIGHT / (MAX_ITEMS + 1) * 1));
 
 		menu[1].setFont(this->data->assets.GetFont("MotherFont"));
 		menu[1].setFillColor(sf::Color::White);
@@ -23,9 +23,9 @@ namespace RealEngine{
 		for (unsigned int i = 0; i < OPTIONS_ROWS; i++) {
 			menu[i].setCharacterSize(60);
 		}
+
 		selectedItemIndex = 0;
 
-		
 	}
 
 
@@ -46,6 +46,10 @@ namespace RealEngine{
 
 				case sf::Keyboard::Down:
 					this->MoveDown();
+					break;
+
+				case sf::Keyboard::Escape:
+					this->data->machine.PushState(StateRef(new MMState(this->data)), true);
 					break;
 
 				case sf::Keyboard::Return:

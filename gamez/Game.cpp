@@ -1,6 +1,5 @@
 #include "Game.h"
 
-
 namespace RealEngine {
 	Game::Game(int width, int height, string name) {
 		data->window.create(sf::VideoMode(width, height), name, sf::Style::Close | sf::Style::Titlebar); //context settings, creating window with specified size
@@ -34,9 +33,7 @@ namespace RealEngine {
 			}
 			interp = accumulator / dt;
 			this->data->machine.GetActiveState()->Draw(interp);
-
 		}
-
 
 	}
 

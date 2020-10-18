@@ -3,6 +3,7 @@
 #include "DEFINITIONS.h"
 #include "MMState.h"
 #include "SettingsState.h"
+#include "GameIntroState.h"
 
 //todo: clean up pointers, delete allocated memory!! we dont want memory leaks
 namespace RealEngine {
@@ -82,6 +83,7 @@ namespace RealEngine {
 					switch (this->GetPressed()) {
 					case 0:
 						cout << "switch to game state here!" << endl;
+						this->data->machine.PushState(StateRef(new GameIntroState(this->data)), true);
 						break;
 					case 1:
 						//replace state in state machine w/ settings state
@@ -146,7 +148,5 @@ namespace RealEngine {
 	int MMState::GetPressed() {
 		return selectedItemIndex;
 	}
-
-
 
 }

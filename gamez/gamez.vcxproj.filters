@@ -28,6 +28,9 @@
     <Filter Include="States\Source">
       <UniqueIdentifier>{3e43817d-fac8-4d0a-8cf4-94c2c2f8479a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Characters">
+      <UniqueIdentifier>{d3aaa78b-82cc-4717-b1d1-9c84c38643cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -52,6 +55,15 @@
       <Filter>States\Source</Filter>
     </ClCompile>
     <ClCompile Include="SettingsState.cpp">
+      <Filter>States\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameIntroState.cpp">
+      <Filter>States\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>States\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseState.cpp">
       <Filter>States\Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -87,6 +99,15 @@
       <Filter>States\Headers</Filter>
     </ClInclude>
     <ClInclude Include="SettingsState.h">
+      <Filter>States\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameIntroState.h">
+      <Filter>States\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>States\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseState.h">
       <Filter>States\Headers</Filter>
     </ClInclude>
   </ItemGroup>

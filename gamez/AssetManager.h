@@ -26,7 +26,7 @@ namespace RealEngine {
 
 		
 	private:
-		std::map < string, sf::Texture > textures;
+		std::map <string, sf::Texture> textures;
 		std::map<string, sf::Font> fonts;
 		std::map<string, sf::SoundBuffer> sounds;
 

@@ -45,7 +45,6 @@ namespace RealEngine {
 		return this->sounds.at(name);
 	}
 
-
-
 	//More assets: load and get audio
+
 }
