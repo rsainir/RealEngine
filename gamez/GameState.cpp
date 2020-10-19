@@ -9,7 +9,7 @@ namespace RealEngine {
 
 		GameState::GameState(GameDataPtr data) {
 			this->data = data;
-			sf::View _view(sf::FloatRect(0,0,1920,1080)); //left, top, width, height
+			sf::View _view(sf::FloatRect(0,0,SCREEN_WIDTH,SCREEN_HEIGHT)); //left, top, width, height
 			this->view = _view;
 		}
 
@@ -54,6 +54,7 @@ namespace RealEngine {
 						break;
 					case sf::Keyboard::Escape:
 						//pause state, keep gamestate on stack
+
 						break;
 					case sf::Keyboard::Space:
 						//this->SpriteJump(sprites[0]);
@@ -88,30 +89,20 @@ namespace RealEngine {
 		}
 
 		void GameState::Update(float dt) {
+		
+
 			//cout << sprites[0].getPosition().y << endl;
 
 
-			//view stuff
-			auto rect = sprites[0].getGlobalBounds();
-			cout << sprites[0].getPosition().x << "and " << view.getSize().x << endl;
-		//	if (view.getSize().x == sprites[0].getPosition().x) {
-			if (fmod(sprites[0].getPosition().x, view.getSize().x) == 0 && (sprites[0].getPosition().x >= view.getSize().x)) {
-				cout << "YO WE GOT A WINNER" << endl;
-				view.move(sf::Vector2f(1920, 0));
-			}
-		
-
-
-
-
+			
 
 			//gravity shit
-			int groundHeight = 700;
+				
+			int groundHeight = 1000;
 			const float gravity = 10.0f;
-			float moveSpeed = 10.0f, jumpSpeed = 30.0f;;
+			float moveSpeed = 10.0f, jumpSpeed = 30.0f;
 			sf::Vector2f velocity(sf::Vector2f(0, 0));
-			
-			
+
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
 				velocity.x = moveSpeed;
 			}
@@ -135,7 +126,23 @@ namespace RealEngine {
 
 			sprites[0].move(velocity.x, velocity.y);
 		
-			
+
+
+
+
+			//view stuff
+			auto rect = sprites[0].getGlobalBounds();
+			cout << sprites[0].getPosition().x << "and " << view.getSize().x << endl;
+			//if (view.getSize().x == sprites[0].getPosition().x) {
+
+			if (fmod(sprites[0].getPosition().x, view.getSize().x) == 0 && (sprites[0].getPosition().x >= view.getSize().x)) {
+				//cout << "YO WE GOT A WINNER" << endl;
+				if (velocity.x > 0) {
+					view.move(sf::Vector2f(SCREEN_WIDTH, 0));
+					cout << "moving forward" << endl;
+				}
+			}
+	
 			
 		}
 

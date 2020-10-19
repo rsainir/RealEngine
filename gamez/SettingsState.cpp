@@ -64,7 +64,7 @@ namespace RealEngine{
 						}
 						break;
 					case 1:
-						this->data->machine.PushState(StateRef(new MMState(this->data)), true);
+						this->data->machine.PopState();//PushState(StateRef(new MMState(this->data)), true);
 						break;
 					}
 					break;

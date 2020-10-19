@@ -87,7 +87,7 @@ namespace RealEngine {
 						break;
 					case 1:
 						//replace state in state machine w/ settings state
-						this->data->machine.PushState(StateRef(new SettingsState(this->data)), true);
+						this->data->machine.PushState(StateRef(new SettingsState(this->data)), false);
 						//can possibly manually call destructor? find out where we want to deallocate data
 						break;
 					case 2:
